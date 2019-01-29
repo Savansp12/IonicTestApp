@@ -1,5 +1,5 @@
 # IonicTestApp
-This ionic app will let you to know about how to integrate and have control over native features and form controller such as <br>
+This ionic app will let you to know about how to integrate and have control over native features such as <br>
 
 #CAMERA - To take a picture from native camera.<br>
 #HARDWARE BACK BUTTON - to control the app from exiting (as in this code and can be done much more with this).<br>
