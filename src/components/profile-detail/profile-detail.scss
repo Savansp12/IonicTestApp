@@ -1,0 +1,65 @@
+profile-detail {
+    .profilePic{
+        margin-right: auto;
+        margin-left: auto;
+        width: 88px;
+        height: 88px;
+        border-radius: 44px;
+        margin-top: 5px;
+        background-color: antiquewhite;
+    }
+    
+    .profilePic p{
+        position: absolute;
+        padding-top: 27px;
+        text-align: center;
+        color: #d0ac7f;
+        z-index: 0;
+        width: inherit;
+        font-size: 12px;
+    }
+
+    .profilePic img{
+        height: -webkit-fill-available;
+        width: -webkit-fill-available;
+    }
+    
+    .profilePic img{
+        border-radius: 44px;
+    }
+    .dangerClr{
+        color:red;
+    }
+
+    .signup{
+        width: 60%;
+        max-width: 214px;
+        margin-left: auto;
+        margin-right: auto;
+        top: 27px;
+    }
+
+    p{
+        background-color: #fbe1d8;
+        color: red;
+        margin-top: 3px;
+        height: 21px;
+        margin-left: 15px;
+        margin-right: 15px;
+        padding-top: 2px;
+        padding-left: 4px;
+        padding-right: 4px;
+    }
+
+    .profilePic p{
+        background-color: transparent; 
+        margin-left: 0px;
+    }
+    p:first-child{
+        margin-top: 6px;
+    }
+
+    ion-item{
+        padding-right: 16px !important;
+    }
+}

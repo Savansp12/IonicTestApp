@@ -1,0 +1,67 @@
+<form [formGroup]="profileForm" (ngSubmit)='btnName=="Sign Up"? signUp() : update() '>
+  <p>Fields marked with * are mandatory</p>
+
+  <div class='profilePic' (click)="selectSource()">
+    <p *ngIf="!userImg">Upload Profile pic here</p>
+    <img [src]="userImg" alt='IMG' *ngIf="userImg">
+  </div>
+
+
+  <ion-item>
+    <ion-label stacked>First Name<sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="text" formControlName="firstName"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.firstName.valid  && (profileForm.controls.firstName.touched  || submitAttempt) ">{{formErrMsgs.firstName}}</p>
+
+
+  <ion-item>
+    <ion-label stacked>Middle Name</ion-label>
+    <ion-input type="text" formControlName="middleName"></ion-input>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label stacked>Last Name<sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="text" formControlName="lastName"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.lastName.valid  && (profileForm.controls.lastName.touched  || submitAttempt) ">{{formErrMsgs.lastName}}</p>
+
+
+  <ion-item>
+    <ion-label stacked>Username<sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="text" formControlName="userName"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.userName.valid  && (profileForm.controls.userName.touched  || submitAttempt) ">{{formErrMsgs.userName}}</p>
+
+
+  <ion-item>
+    <ion-label stacked>Password <sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="password" formControlName="passWord"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.passWord.valid  && (profileForm.controls.passWord.touched  || submitAttempt) ">{{formErrMsgs.passWord}}</p>
+
+
+  <ion-item>
+    <ion-label stacked>Confirm Password <sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="password" formControlName="confirmPassword"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.confirmPassword.valid  && (profileForm.controls.confirmPassword.touched  || submitAttempt) ">{{formErrMsgs.confirmPassword}}</p>
+
+
+  <ion-item>
+    <ion-label stacked>Mobile Number<sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="Number" formControlName="mobileNum"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.mobileNum.valid  && (profileForm.controls.mobileNum.touched  || submitAttempt) ">{{formErrMsgs.mobileNum}}</p>
+
+  <ion-item>
+    <ion-label stacked>Email Id <sup class="dangerClr">*</sup></ion-label>
+    <ion-input type="email" formControlName="emailId"></ion-input>
+  </ion-item>
+  <p *ngIf="!profileForm.controls.emailId.valid  && (profileForm.controls.emailId.touched  || submitAttempt) ">{{formErrMsgs.emailId}}</p>
+
+
+  <button ion-button full type="submit" [disabled]="!profileForm.valid" class='signup'>
+    {{btnName}}
+  </button>
+</form>

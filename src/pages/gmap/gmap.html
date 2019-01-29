@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>My Location</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+  <div #map id="map" class="mapLoc" style=" width: 100%;  height: 55%;">
+  </div>
+
+  <ion-card-header text-center>
+    <h3 class="address" *ngIf="address">Currently your located here</h3>
+  </ion-card-header>
+  <ion-card-content>
+    {{address}}
+  </ion-card-content>
+</ion-content>

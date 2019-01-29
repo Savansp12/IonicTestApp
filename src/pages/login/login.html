@@ -1,0 +1,37 @@
+
+<ion-content class='shadedWhite'>
+  <ion-card>
+    <ion-card-header text-center>
+      <ion-icon name="lock" size='large'></ion-icon>
+      <p><b>Login with credentials</b></p>
+    </ion-card-header>
+
+    <ion-card-content>
+      <form [formGroup]='loginForm' (ngSubmit)="signIn()">
+      <ion-item>
+        <ion-label  stacked>Username</ion-label>
+        <ion-input formControlName="userName"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label stacked>Password</ion-label>
+        <ion-input type="password" formControlName="passWord"></ion-input>
+      </ion-item>
+
+      <div text-center margin-top>
+       
+        <button ion-button full type='submit' color="secondary" [disabled]="!loginForm.valid" >
+          Sign In
+        </button>
+
+        <button ion-button full type="button" (click)="signUp()">
+          Sign Up
+        </button>
+       
+      </div>
+      </form>
+
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
